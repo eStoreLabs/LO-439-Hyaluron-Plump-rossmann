@@ -122,6 +122,11 @@ p {
   flex-direction: column;
   align-items: center;
 }
+#es-elseve.es-elseve .es-kv__logo-img {
+  margin: 0 auto;
+  display: block;
+  padding: 3px 0;
+}
 #es-elseve.es-elseve .es-kv__img {
   margin: 0 auto;
   display: block;
@@ -129,15 +134,20 @@ p {
   max-width: 60%;
 }
 #es-elseve.es-elseve .es-kv__img--1 {
-  max-height: 250px;
+  max-height: 230px;
+}
+@media (min-width: 990px) {
+  #es-elseve.es-elseve .es-kv__img--1 {
+    max-height: 250px;
+  }
 }
 #es-elseve.es-elseve .es-kv__branding {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding: 10px 30px;
   gap: 20px;
-  max-width: 280px;
+  max-width: 300px;
 }
 @media (min-width: 990px) {
   #es-elseve.es-elseve .es-kv__branding {
@@ -191,6 +201,7 @@ p {
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
+  font-size: 30px;
   animation: slidedown 0.8s ease forwards;
 }
 #es-elseve.es-elseve .es-kv__text--1-2 {
@@ -213,6 +224,7 @@ p {
   max-width: -moz-fit-content;
   max-width: fit-content;
   text-align: center;
+  font-size: 18px;
   animation: slidedown 0.8s ease forwards;
 }
 @media (min-width: 990px) {
@@ -257,15 +269,22 @@ p {
   line-height: 1;
 }
 #es-elseve.es-elseve .es-benefits__disclaimer {
+  margin-top: 10px;
   padding-bottom: 20px;
   font-weight: 300;
-  font-size: 10px;
+  font-size: 18px;
   text-align: center;
+}
+#es-elseve.es-elseve .es-formula {
+  width: 100%;
 }
 #es-elseve.es-elseve .es-formula__wrapper {
   border-radius: 12px;
-  padding: 32px 16px;
-  background: rgba(243, 243, 243, 0.8);
+}
+#es-elseve.es-elseve .es-formula__left-img, #es-elseve.es-elseve .es-formula__right-img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
 }
 #es-elseve.es-elseve .es-formula__image img {
   display: none;
@@ -557,16 +576,20 @@ p {
     padding: 20px 16px 0 16px;
   }
 }
+@media screen and (min-width: 500px) {
+  #es-elseve.es-elseve .es-formula__container {
+    display: flex;
+    gap: 5px;
+  }
+}
 @media screen and (min-width: 700px) {
   #es-elseve.es-elseve .es-formula {
-    padding: 30px 64px;
     background-size: 100%;
     background-position: center left;
   }
   #es-elseve.es-elseve .es-formula__wrapper {
     position: relative;
     max-width: 99%;
-    min-height: 543px;
   }
   #es-elseve.es-elseve .es-formula__image {
     position: absolute;
@@ -680,7 +703,6 @@ p {
   }
   #es-elseve.es-elseve .es-formula img {
     display: block;
-    padding-left: 43px;
     max-height: 510px;
   }
   #es-elseve.es-elseve .es-formula__content {
@@ -689,10 +711,6 @@ p {
     margin-left: auto;
     max-width: 83%;
     max-height: 300px;
-  }
-  #es-elseve.es-elseve .es-formula__wrapper {
-    background: unset;
-    min-height: 530px;
   }
 }
 @keyframes slidedown {
