@@ -117,12 +117,10 @@ p {
         // display: block;
         font-size: 40px;
         position: absolute;
-        bottom: 30%;
-        left: 10%;
 
         position: absolute;
-        bottom: -130px;
-        left: 40px;
+        bottom: -146px;
+        left: 44px;
       }
     }
 
@@ -157,6 +155,7 @@ p {
       margin: 0 auto;
       display: block;
       padding: 3px 0;
+      max-width: 70%;
     }
 
     &__img {
@@ -164,6 +163,10 @@ p {
       display: block;
       padding: 3px 0;
       max-width: 60%;
+
+      &--brand {
+        max-width: 78%;
+      }
 
       &--1 {
         max-height: 230px;
@@ -185,7 +188,13 @@ p {
 
       @media (min-width: 990px) {
         max-width: 315px;
+        margin-right: 20px;
       }
+    }
+
+    &__logos {
+      padding-top: 20px;
+      margin-bottom: 7px;
     }
 
     &__packshot {
@@ -320,6 +329,7 @@ p {
 
     &__disclaimer {
       margin-top: 10px;
+      margin-bottom: 20px;
       padding-bottom: 20px;
       font-weight: 300;
       font-size: 18px;
@@ -336,9 +346,54 @@ p {
       //   background: rgba(243, 243, 243, 0.8);
     }
 
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      margin-bottom: 30px;
+    }
+
     &__left-img,
     &__right-img {
       @include img;
+    }
+
+    &__left-text,
+    &__right-text {
+      font-weight: 600;
+    }
+
+    &__left,
+    &__right {
+      position: relative;
+    }
+
+    &__left-text-container {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+
+      // transform: translate(-50%, -50%);
+
+      @media screen and (min-width: 500px) {
+        top: 55%;
+        left: 10%;
+      }
+    }
+
+    &__left-text-line {
+      @include img;
+      max-width: 50%;
+
+      &--1 {
+        margin-left: 10px;
+      }
+    }
+
+    &__right-text-container {
+      position: absolute;
+      top: 8%;
+      left: 9%;
     }
 
     &__image {
@@ -408,6 +463,10 @@ p {
 
     &__img {
       @include img;
+
+      &--expert {
+        max-width: 25%;
+      }
     }
 
     &__container {
@@ -424,14 +483,39 @@ p {
       padding: 16px;
       max-width: 632px;
       background: $purple;
+
+      &--expert {
+        padding: 30px;
+      }
     }
 
     &__text {
       background: $purple;
+
+      &--brand {
+        position: absolute;
+        top: 58%;
+        left: 52%;
+        font-size: 16px;
+        max-width: 180px;
+        text-transform: uppercase;
+
+        & span {
+          font-weight: 400;
+        }
+      }
     }
 
     &__wrapper {
-      background: $light;
+      &--brand {
+        position: relative;
+      }
+
+      &--expert {
+        background: $light;
+        padding: 60px 22px;
+        line-height: 1.3;
+      }
     }
 
     &__name {
@@ -443,25 +527,107 @@ p {
     &__desc {
       margin-bottom: 24px;
       font-weight: 300;
-      font-size: 16px;
+      font-size: 14px;
       @include text;
+
+      &--centered {
+        text-align: center;
+      }
+    }
+
+    &__expert {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    &__expert-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__expert-inner-subtitle {
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
+
+  .es-routine {
+    &__text {
+      margin-bottom: 50px;
+      font-weight: 700;
+      font-size: 25px;
+      text-align: center;
+      text-transform: uppercase;
+
+      span {
+        color: $red;
+        font-weight: 700;
+        line-height: 1;
+      }
+    }
+
+    &__container {
+      max-width: 650px;
+      margin-bottom: 60px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    &__single {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      max-width: 200px;
+      background: #fff;
+    }
+
+    &__img {
+      @include img;
+    }
+
+    &__title {
+      // min-height: 95px;
+      padding: 22px;
+      padding-left: 3px;
+      padding-right: 3px;
+      width: 100%;
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      background: $purple;
+    }
+
+    &__subtitle {
+      min-height: 66px;
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      text-align: center;
+      font-weight: 400;
+      font-size: 12px;
+      background: #e9dbf2;
     }
   }
 
   .es-ba {
     margin-bottom: 50px;
+    position: relative;
 
     &__title {
-      margin-bottom: 16px;
-      font-weight: 200;
-      font-size: 30px;
-      text-transform: uppercase;
-      @include text;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 25px;
       text-align: center;
-      color: #fff;
-      text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
-      font-weight: 600;
-      font-size: 40px;
+      text-transform: uppercase;
     }
 
     &__subtitle {
@@ -471,6 +637,7 @@ p {
     }
 
     &__container {
+      max-width: 500px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -534,6 +701,14 @@ p {
       @include text;
       text-transform: uppercase;
       text-align: center;
+
+      & strong {
+        color: $red;
+      }
+    }
+
+    &__subtitle {
+      text-align: center;
     }
 
     &__products {
@@ -541,6 +716,8 @@ p {
       flex-wrap: wrap;
       justify-content: center;
       align-items: flex-end;
+      max-width: 500px;
+      margin: 0 auto;
       gap: 3px;
     }
 
@@ -570,22 +747,23 @@ p {
     }
 
     &__text {
+      min-height: 54px;
       margin-bottom: 24px;
       font-weight: 800;
-      font-size: 16px;
       @include text;
+      font-size: 15px;
       text-align: center;
     }
 
     &__link {
       position: relative;
       z-index: 1;
-      border-radius: 8px;
+      border-radius: 5px;
       display: inline-block;
       padding: 12px 18px;
       color: #fff;
       font-weight: 800;
-      font-size: 18px;
+      font-size: 14px;
       overflow: hidden;
       @include text;
       text-decoration: none;
@@ -618,16 +796,20 @@ p {
   }
 
   .es-footer {
+    border-top: 3px solid #d9d9d9;
+    width: 100%;
+
     &__logo {
       padding-bottom: 24px;
     }
 
     &__img {
+      padding-top: 35px;
       @include img;
     }
 
     &__disclaimer {
-      margin-bottom: 32px;
+      margin-top: 32px;
       font-size: 10px;
       @include text;
       text-align: center;
@@ -637,7 +819,6 @@ p {
       display: flex;
       align-items: center;
       padding: 32px 0;
-      background: #f9f7f7;
       flex-flow: column;
       gap: 32px;
     }
@@ -654,6 +835,7 @@ p {
   @media screen and (min-width: 500px) {
     .es-kv {
       position: relative;
+      margin-bottom: 40px;
 
       &__wrapper {
         flex-direction: row-reverse;
@@ -686,9 +868,28 @@ p {
   }
 
   @media screen and (min-width: 500px) {
+    .es-info {
+      &__text {
+        &--brand {
+          position: absolute;
+          top: 61%;
+          left: 52%;
+          font-size: 26px;
+          max-width: 180px;
+          text-transform: uppercase;
+
+          & span {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) {
     .es-formula {
       &__container {
-        display: flex;
+        flex-direction: row;
         gap: 5px;
       }
     }
@@ -759,7 +960,7 @@ p {
 
     .es-info {
       margin: 30px auto;
-      margin-bottom: 50px;
+      margin-bottom: 90px;
 
       &__container {
         margin: 0 auto;
@@ -780,6 +981,14 @@ p {
         flex: 1;
         max-width: 50%;
         flex-flow: column;
+
+        &--logos {
+          padding: 0;
+        }
+
+        &--expert {
+          padding: 40px;
+        }
       }
 
       &__bg {
@@ -789,28 +998,51 @@ p {
       &__img {
         height: 100%;
         @include img;
+
+        &--expert {
+          max-width: 33%;
+          margin-right: 0;
+          margin-left: 10%;
+        }
       }
 
       &__title {
         font-size: 30px;
+      }
+
+      &__text {
+        &--brand {
+          font-size: 16px;
+          top: 58%;
+        }
       }
     }
 
     .es-ba {
-      &__title {
-        font-size: 30px;
+      &__container {
+        max-width: 100%;
+      }
+
+      &__single {
+        max-width: 225px;
       }
     }
 
     .es-cross {
       &__title {
+        margin-bottom: 10px;
         font-size: 30px;
+      }
+
+      &__subtitle {
+        text-align: center;
       }
 
       &__products {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        max-width: 700px;
       }
 
       &__product {
@@ -822,7 +1054,6 @@ p {
       &__container {
         justify-content: center;
         padding: 10px 46px;
-        background: #f9f7f7;
         flex-flow: row;
       }
 
@@ -864,6 +1095,78 @@ p {
       &__wrapper {
         // background: unset;
         // min-height: 530px;
+      }
+    }
+
+    .es-info {
+      &__text {
+        &--brand {
+          font-size: 24px;
+          top: 61%;
+          left: 52%;
+        }
+      }
+    }
+
+    .es-ba {
+      &__single {
+        max-width: 325px;
+      }
+
+      &__container {
+        max-width: 100%;
+      }
+
+      &__title {
+        position: absolute;
+        width: 100%;
+        top: 55%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        z-index: 1;
+        margin-bottom: 16px;
+        font-weight: 200;
+        font-size: 30px;
+        text-transform: uppercase;
+        @include text;
+        text-align: center;
+        color: #fff;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+        font-weight: 600;
+        font-size: 30px;
+      }
+    }
+
+    .es-cross {
+      &__products {
+        max-width: none;
+      }
+    }
+
+    .es-routine {
+      &__container {
+        max-width: none;
+      }
+
+      &__title {
+        font-size: 13px;
+      }
+
+      &__single {
+        max-width: 190px;
+      }
+    }
+
+    .es-benefits {
+      &__text {
+        font-size: 30px;
+      }
+    }
+
+    .es-routine {
+      &__text {
+        font-size: 30px;
       }
     }
   }
