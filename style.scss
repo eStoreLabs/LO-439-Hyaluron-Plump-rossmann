@@ -337,6 +337,8 @@ p {
     &__left-text,
     &__right-text {
       font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
 
     &__left,
@@ -361,8 +363,8 @@ p {
 
     &__right-text-container {
       position: absolute;
-      top: 8%;
-      left: 9%;
+      top: 3%;
+      left: 10%;
     }
 
     &__image {
@@ -628,7 +630,7 @@ p {
     &__label {
       position: absolute;
       bottom: 0;
-      left: 20%;
+      left: 19%;
       padding: 4px 16px;
       color: #ffffff;
       font-weight: 700;
@@ -636,6 +638,14 @@ p {
       @include text;
       text-align: center;
       text-transform: uppercase;
+
+      &--2 {
+        left: 17%;
+      }
+
+      &--3 {
+        left: 21%;
+      }
 
       &:last-child {
         left: 50%;
@@ -1168,6 +1178,17 @@ p {
     }
 
     .es-ba {
+      &__label {
+        left: 20%;
+
+        &--2 {
+          left: 18%;
+        }
+
+        &--3 {
+          left: 22%;
+        }
+      }
       &__single {
         max-width: 325px;
       }
