@@ -726,9 +726,23 @@ p {
       transition: -webkit-transform 0.3s;
       transition: transform 0.3s;
       transition: transform 0.3s, -webkit-transform 0.3s;
+    }
 
-      img {
-        max-width: none;
+    &__img {
+      // max-width: none;
+      max-height: 361px;
+    }
+
+    &__img {
+      &--2 {
+        max-height: 341px;
+      }
+      &--3 {
+        max-height: 183px;
+      }
+
+      &--4 {
+        max-height: 270px;
       }
     }
 

@@ -552,8 +552,17 @@ p {
   margin-bottom: 24px;
   transition: transform 0.3s;
 }
-#es-elseve.es-elseve .es-cross__packshot img {
-  max-width: none;
+#es-elseve.es-elseve .es-cross__img {
+  max-height: 361px;
+}
+#es-elseve.es-elseve .es-cross__img--2 {
+  max-height: 341px;
+}
+#es-elseve.es-elseve .es-cross__img--3 {
+  max-height: 183px;
+}
+#es-elseve.es-elseve .es-cross__img--4 {
+  max-height: 270px;
 }
 #es-elseve.es-elseve .es-cross__text {
   min-height: 54px;
