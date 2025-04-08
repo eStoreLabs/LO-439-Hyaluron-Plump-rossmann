@@ -4,16 +4,6 @@ $light: #f1e9f7;
 $purple: #e9dbf2;
 $red: #e51c57;
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 @mixin text {
   font-family: $regular;
 }
@@ -24,24 +14,7 @@ body {
   max-width: 100%;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  color: #000;
-  font-family: $regular;
-  margin: 0;
-  padding: 0;
-}
-
-#es-elseve.es-elseve {
+#es-rc #es-rc-content {
   margin: 0 auto;
   display: -webkit-box;
   display: flex;
@@ -60,8 +33,25 @@ p {
   overflow: hidden;
   background: #fff;
 
+  * {
+    box-sizing: border-box;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: #000;
+    font-family: $regular;
+    margin: 0;
+    padding: 0;
+  }
+
   .es-kv {
-    background: url('img/kv.png') no-repeat;
+    background: url('../images/kv.png') no-repeat;
     background-size: cover;
     background-position: center right;
     min-width: 100%;
@@ -133,7 +123,7 @@ p {
         max-width: 78%;
       }
 
-      &--1 {
+      &--packshot {
         max-height: 230px;
       }
     }
@@ -157,7 +147,7 @@ p {
     }
 
     &__text-inner {
-      &--2 {
+      &--shadow {
         text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
       }
     }
@@ -205,7 +195,7 @@ p {
         font-size: 20px;
       }
 
-      &--1 {
+      &--first {
         margin: 0 auto;
 
         padding: 0 3px;
@@ -234,7 +224,7 @@ p {
         }
       }
 
-      &--2 {
+      &--second {
         margin: 0 auto;
         padding: 0 3px;
         color: #ffffff;
@@ -356,7 +346,7 @@ p {
       @include img;
       max-width: 50%;
 
-      &--1 {
+      &--left {
         margin-left: 10px;
       }
     }
@@ -639,11 +629,11 @@ p {
       text-align: center;
       text-transform: uppercase;
 
-      &--2 {
+      &--before-second {
         left: 17%;
       }
 
-      &--3 {
+      &--before-third {
         left: 21%;
       }
 
@@ -729,19 +719,19 @@ p {
     }
 
     &__img {
-      // max-width: none;
       max-height: 361px;
     }
 
     &__img {
-      &--2 {
+      &--second-packshot {
         max-height: 341px;
       }
-      &--3 {
+
+      &--third-packshot {
         max-height: 183px;
       }
 
-      &--4 {
+      &--fourth-packshot {
         max-height: 270px;
       }
     }
@@ -871,12 +861,12 @@ p {
       }
 
       &__text {
-        &--1 {
+        &--first {
           position: relative;
           left: 10px;
         }
 
-        &--2 {
+        &--second {
           position: relative;
           left: 10px;
         }
@@ -951,6 +941,7 @@ p {
         left: -6px;
       }
     }
+
     .es-formula {
       background-size: 100%;
       background-position: center left;
@@ -1160,7 +1151,7 @@ p {
       }
 
       &__img {
-        &--1 {
+        &--packshot {
           max-height: 250px;
         }
       }
@@ -1195,14 +1186,15 @@ p {
       &__label {
         left: 19%;
 
-        &--2 {
+        &--before-second {
           left: 18%;
         }
 
-        &--3 {
+        &--before-third {
           left: 22%;
         }
       }
+
       &__single {
         max-width: 325px;
       }
