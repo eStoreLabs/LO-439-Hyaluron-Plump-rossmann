@@ -33,7 +33,7 @@
   background-size: cover;
   background-position: center right;
   min-width: 100%;
-  min-height: 540px;
+  min-height: 500px;
 }
 #es-rc #es-rc-content .es-kv__image {
   margin: 0 auto;
@@ -45,12 +45,18 @@
   animation: slideright 0.8s ease forwards;
   animation-delay: 0.9s;
 }
+#es-rc #es-rc-content .es-kv__left {
+  position: relative;
+}
 #es-rc #es-rc-content .es-kv__title {
+  position: absolute;
+  top: 75px;
+  left: 15px;
+  font-size: 14px;
   margin: 0;
   padding: 5px 10px;
   color: #ffffff;
   font-weight: 500;
-  font-size: 35px;
   line-height: 1;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -93,6 +99,7 @@
 }
 #es-rc #es-rc-content .es-kv__img--packshot {
   max-height: 230px;
+  display: none;
 }
 #es-rc #es-rc-content .es-kv__branding {
   display: flex;
@@ -644,6 +651,9 @@
     min-height: 500px;
     background-position: center center;
   }
+  #es-rc #es-rc-content .es-kv__img--packshot {
+    display: block;
+  }
   #es-rc #es-rc-content .es-kv__image {
     display: none;
   }
@@ -653,6 +663,8 @@
   }
   #es-rc #es-rc-content .es-kv__title {
     padding: 0 10px;
+    font-size: 35px;
+    position: static;
   }
   #es-rc #es-rc-content .es-kv__packshot {
     position: absolute;
@@ -710,6 +722,7 @@
     position: absolute;
     position: absolute;
     bottom: -110px;
+    top: auto;
     left: -6px;
   }
   #es-rc #es-rc-content .es-formula {

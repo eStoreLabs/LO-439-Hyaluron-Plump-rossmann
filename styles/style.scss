@@ -56,7 +56,7 @@ $red: #e51c57;
     background-size: cover;
     background-position: center right;
     min-width: 100%;
-    min-height: 540px;
+    min-height: 500px;
 
     &__image {
       @include img;
@@ -70,12 +70,19 @@ $red: #e51c57;
       animation-delay: 0.9s;
     }
 
+    &__left {
+      position: relative;
+    }
+
     &__title {
+      position: absolute;
+      top: 75px;
+      left: 15px;
+      font-size: 14px;
       margin: 0;
       padding: 5px 10px;
       color: #ffffff;
       font-weight: 500;
-      font-size: 35px;
       line-height: 1;
       @include text;
       text-transform: uppercase;
@@ -130,6 +137,7 @@ $red: #e51c57;
 
       &--packshot {
         max-height: 230px;
+        display: none;
       }
     }
 
@@ -847,6 +855,12 @@ $red: #e51c57;
       min-height: 500px;
       background-position: center center;
 
+      &__img {
+        &--packshot {
+          display: block;
+        }
+      }
+
       &__image {
         display: none;
       }
@@ -861,6 +875,8 @@ $red: #e51c57;
 
       &__title {
         padding: 0 10px;
+        font-size: 35px;
+        position: static;
       }
 
       &__packshot {
@@ -948,6 +964,7 @@ $red: #e51c57;
         position: absolute;
         position: absolute;
         bottom: -110px;
+        top: auto;
         left: -6px;
       }
     }
