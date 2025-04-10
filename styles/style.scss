@@ -51,11 +51,16 @@ $red: #e51c57;
   }
 
   .es-kv {
-    background: url('../images/kv.png') no-repeat;
+    // background: url('../images/kv.png') no-repeat;
+    background: #e9dbf2;
     background-size: cover;
     background-position: center right;
     min-width: 100%;
     min-height: 540px;
+
+    &__image {
+      @include img;
+    }
 
     &__left {
       max-width: 275px;
@@ -836,10 +841,15 @@ $red: #e51c57;
 
   @media screen and (min-width: 500px) {
     .es-kv {
+      background: url('../images/kv.png') no-repeat;
       position: relative;
       margin-bottom: 40px;
       min-height: 500px;
       background-position: center center;
+
+      &__image {
+        display: none;
+      }
 
       &__wrapper {
         -webkit-box-orient: horizontal;

@@ -29,11 +29,16 @@
   padding: 0;
 }
 #es-rc #es-rc-content .es-kv {
-  background: url("../images/kv.png") no-repeat;
+  background: #e9dbf2;
   background-size: cover;
   background-position: center right;
   min-width: 100%;
   min-height: 540px;
+}
+#es-rc #es-rc-content .es-kv__image {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
 }
 #es-rc #es-rc-content .es-kv__left {
   max-width: 275px;
@@ -633,10 +638,14 @@
 }
 @media screen and (min-width: 500px) {
   #es-rc #es-rc-content .es-kv {
+    background: url("../images/kv.png") no-repeat;
     position: relative;
     margin-bottom: 40px;
     min-height: 500px;
     background-position: center center;
+  }
+  #es-rc #es-rc-content .es-kv__image {
+    display: none;
   }
   #es-rc #es-rc-content .es-kv__wrapper {
     flex-direction: row-reverse;
