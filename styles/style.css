@@ -29,11 +29,12 @@
   padding: 0;
 }
 #es-rc #es-rc-content .es-kv {
-  background: #e9dbf2;
-  background-size: cover;
-  background-position: center right;
+  background: url("../images/kv-mobile-2.png") no-repeat;
+  background-size: contain;
+  background-position: top;
   min-width: 100%;
-  min-height: 500px;
+  min-height: 455px;
+  background-color: #e9dbf2;
 }
 #es-rc #es-rc-content .es-kv__image {
   margin: 0 auto;
@@ -41,18 +42,24 @@
   max-width: 100%;
 }
 #es-rc #es-rc-content .es-kv__left {
-  max-width: 275px;
   animation: slideright 0.8s ease forwards;
   animation-delay: 0.9s;
-}
-#es-rc #es-rc-content .es-kv__left {
   position: relative;
+  min-height: 190px;
+}
+#es-rc #es-rc-content .es-kv__image-photo {
+  position: absolute;
+  max-width: 135px;
+  top: 0;
+  left: 8px;
+  border: 3px solid white;
+  z-index: -1;
 }
 #es-rc #es-rc-content .es-kv__title {
   position: absolute;
-  top: 75px;
-  left: 15px;
-  font-size: 14px;
+  top: 104px;
+  left: 5px;
+  font-size: 18px;
   margin: 0;
   padding: 5px 10px;
   color: #ffffff;
@@ -61,6 +68,7 @@
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   margin: auto;
+  z-index: 3;
 }
 #es-rc #es-rc-content .es-kv__subtitle {
   margin-bottom: 0;
@@ -86,7 +94,7 @@
   margin: 0 auto;
   display: block;
   padding: 3px 0;
-  max-width: 70%;
+  max-width: 50%;
 }
 #es-rc #es-rc-content .es-kv__img {
   margin: 0 auto;
@@ -95,11 +103,14 @@
   max-width: 60%;
 }
 #es-rc #es-rc-content .es-kv__img--brand {
-  max-width: 78%;
+  max-width: 65%;
 }
 #es-rc #es-rc-content .es-kv__img--packshot {
-  max-height: 230px;
-  display: none;
+  max-height: 151px;
+  position: absolute;
+  top: 200px;
+  right: 15px;
+  z-index: 10;
 }
 #es-rc #es-rc-content .es-kv__branding {
   display: flex;
@@ -108,6 +119,8 @@
   padding: 10px 30px;
   gap: 20px;
   max-width: 300px;
+  margin-left: auto;
+  padding-right: 0;
 }
 #es-rc #es-rc-content .es-kv__logos {
   padding-top: 20px;
@@ -116,11 +129,19 @@
 #es-rc #es-rc-content .es-kv__text-inner--shadow {
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
 }
+#es-rc #es-rc-content .es-kv__text-inner--desktop {
+  display: none;
+}
+#es-rc #es-rc-content .es-kv__text-inner--mobile {
+  color: #000;
+  text-shadow: none;
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+}
 #es-rc #es-rc-content .es-kv__packshot {
   display: block;
   padding: 16px;
-  animation: appear 0.8s ease forwards;
-  animation-delay: 0.9s;
 }
 #es-rc #es-rc-content .es-kv__logo {
   margin-bottom: 20px;
@@ -151,7 +172,7 @@
 #es-rc #es-rc-content .es-kv__text--first {
   margin: 0 auto;
   padding: 0 3px;
-  color: #e51c57;
+  color: #ffffff;
   opacity: 0.5;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -160,9 +181,12 @@
   font-weight: 500;
   font-size: 30px;
   animation: slidedown 0.8s ease forwards;
+  font-size: 25px;
 }
 #es-rc #es-rc-content .es-kv__text--first-2 {
   font-weight: 300;
+  color: #e51c57;
+  font-size: 25px;
 }
 @media (min-width: 990px) {
   #es-rc #es-rc-content .es-kv__text--first {
@@ -183,6 +207,11 @@
   text-align: center;
   font-size: 18px;
   animation: slidedown 0.8s ease forwards;
+}
+#es-rc #es-rc-content .es-kv__text--second-mobile {
+  color: #000;
+  font-weight: 700;
+  font-size: 12px;
 }
 @media (min-width: 990px) {
   #es-rc #es-rc-content .es-kv__text--second {
@@ -643,7 +672,7 @@
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 450px) {
   #es-rc #es-rc-content .es-kv {
     background: url("../images/kv.png") no-repeat;
     position: relative;
@@ -651,8 +680,23 @@
     min-height: 500px;
     background-position: center center;
   }
+  #es-rc #es-rc-content .es-kv__branding {
+    align-items: center;
+    padding: 10px 30px;
+  }
+  #es-rc #es-rc-content .es-kv__image-photo {
+    display: none;
+  }
+  #es-rc #es-rc-content .es-kv__text-inner--mobile {
+    display: none;
+  }
+  #es-rc #es-rc-content .es-kv__text-inner--desktop {
+    display: block;
+  }
   #es-rc #es-rc-content .es-kv__img--packshot {
     display: block;
+    max-height: 250px;
+    position: static;
   }
   #es-rc #es-rc-content .es-kv__image {
     display: none;
@@ -661,9 +705,12 @@
     flex-direction: row-reverse;
     align-items: flex-end;
   }
+  #es-rc #es-rc-content .es-kv__text--first {
+    color: #e51c57;
+  }
   #es-rc #es-rc-content .es-kv__title {
     padding: 0 10px;
-    font-size: 35px;
+    font-size: 30px;
     position: static;
   }
   #es-rc #es-rc-content .es-kv__packshot {

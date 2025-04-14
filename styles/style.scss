@@ -51,34 +51,43 @@ $red: #e51c57;
   }
 
   .es-kv {
-    // background: url('../images/kv.png') no-repeat;
-    background: #e9dbf2;
-    background-size: cover;
-    background-position: center right;
+    background: url('../images/kv-mobile-2.png') no-repeat;
+    // background: #e9dbf2;
+    background-size: contain;
+    background-position: top;
     min-width: 100%;
-    min-height: 500px;
+    min-height: 455px;
+    background-color: #e9dbf2;
 
     &__image {
       @include img;
     }
 
     &__left {
-      max-width: 275px;
       -webkit-animation: slideright 0.8s ease forwards;
       animation: slideright 0.8s ease forwards;
       -webkit-animation-delay: 0.9s;
       animation-delay: 0.9s;
+
+      position: relative;
+      min-height: 190px;
+      // z-index: 9;
     }
 
-    &__left {
-      position: relative;
+    &__image-photo {
+      position: absolute;
+      max-width: 135px;
+      top: 0;
+      left: 8px;
+      border: 3px solid white;
+      z-index: -1;
     }
 
     &__title {
       position: absolute;
-      top: 75px;
-      left: 15px;
-      font-size: 14px;
+      top: 104px;
+      left: 5px;
+      font-size: 18px;
       margin: 0;
       padding: 5px 10px;
       color: #ffffff;
@@ -87,6 +96,7 @@ $red: #e51c57;
       @include text;
       text-transform: uppercase;
       margin: auto;
+      z-index: 3;
     }
 
     &__subtitle {
@@ -122,7 +132,7 @@ $red: #e51c57;
       margin: 0 auto;
       display: block;
       padding: 3px 0;
-      max-width: 70%;
+      max-width: 50%;
     }
 
     &__img {
@@ -132,16 +142,20 @@ $red: #e51c57;
       max-width: 60%;
 
       &--brand {
-        max-width: 78%;
+        max-width: 65%;
       }
 
       &--packshot {
-        max-height: 230px;
-        display: none;
+        max-height: 151px;
+        position: absolute;
+        top: 200px;
+        right: 15px;
+        z-index: 10;
       }
     }
 
     &__branding {
+
       display: -webkit-box;
       display: flex;
       -webkit-box-orient: vertical;
@@ -152,6 +166,8 @@ $red: #e51c57;
       padding: 10px 30px;
       gap: 20px;
       max-width: 300px;
+      margin-left: auto;
+      padding-right: 0;
     }
 
     &__logos {
@@ -163,15 +179,23 @@ $red: #e51c57;
       &--shadow {
         text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
       }
+
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        color: #000;
+        text-shadow: none;
+        position: absolute;
+        bottom: 15px;
+        right: 0;
+      }
     }
 
     &__packshot {
       display: block;
       padding: 16px;
-      -webkit-animation: appear 0.8s ease forwards;
-      animation: appear 0.8s ease forwards;
-      -webkit-animation-delay: 0.9s;
-      animation-delay: 0.9s;
     }
 
     &__logo {
@@ -212,7 +236,7 @@ $red: #e51c57;
         margin: 0 auto;
 
         padding: 0 3px;
-        color: $red;
+        color: #ffffff;
         opacity: 0.5;
         max-width: -webkit-fit-content;
         max-width: -moz-fit-content;
@@ -223,9 +247,12 @@ $red: #e51c57;
         font-size: 30px;
         -webkit-animation: slidedown 0.8s ease forwards;
         animation: slidedown 0.8s ease forwards;
+        font-size: 25px;
 
         &-2 {
           font-weight: 300;
+          color: $red;
+          font-size: 25px;
         }
 
         @media (min-width: 990px) {
@@ -250,6 +277,12 @@ $red: #e51c57;
         font-size: 18px;
         -webkit-animation: slidedown 0.8s ease forwards;
         animation: slidedown 0.8s ease forwards;
+
+        &-mobile {
+          color: #000;
+          font-weight: 700;
+          font-size: 12px;
+        }
 
         @media (min-width: 990px) {
           font-size: 16px;
@@ -847,7 +880,7 @@ $red: #e51c57;
     }
   }
 
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 450px) {
     .es-kv {
       background: url('../images/kv.png') no-repeat;
       position: relative;
@@ -855,9 +888,31 @@ $red: #e51c57;
       min-height: 500px;
       background-position: center center;
 
+      &__branding {
+        align-items: center;
+        padding: 10px 30px;
+      }
+
+      &__image-photo {
+        display: none;
+      }
+
+
+      &__text-inner {
+        &--mobile {
+          display: none;
+        }
+
+        &--desktop {
+          display: block;
+        }
+      }
+
       &__img {
         &--packshot {
           display: block;
+          max-height: 250px;
+          position: static;
         }
       }
 
@@ -873,9 +928,15 @@ $red: #e51c57;
         align-items: flex-end;
       }
 
+      &__text {
+        &--first {
+          color: $red;
+        }
+      }
+
       &__title {
         padding: 0 10px;
-        font-size: 35px;
+        font-size: 30px;
         position: static;
       }
 
