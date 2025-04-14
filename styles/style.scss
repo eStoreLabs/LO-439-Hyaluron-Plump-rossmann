@@ -1004,6 +1004,20 @@ $red: #e51c57;
 
   @media screen and (min-width: 700px) {
     .es-kv {
+      &__logo-img {
+        margin: 0 auto;
+        display: block;
+        padding: 3px 0;
+        max-width: 70%;
+      }
+
+      &__img {
+
+        &--brand {
+          max-width: 78%;
+        }
+      }
+
       &__container {
         display: -webkit-box;
         display: flex;

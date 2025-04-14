@@ -755,6 +755,15 @@
   }
 }
 @media screen and (min-width: 700px) {
+  #es-rc #es-rc-content .es-kv__logo-img {
+    margin: 0 auto;
+    display: block;
+    padding: 3px 0;
+    max-width: 70%;
+  }
+  #es-rc #es-rc-content .es-kv__img--brand {
+    max-width: 78%;
+  }
   #es-rc #es-rc-content .es-kv__container {
     display: flex;
     flex-direction: row-reverse;
