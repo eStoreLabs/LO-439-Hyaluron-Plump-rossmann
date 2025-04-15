@@ -212,6 +212,7 @@
   color: #000;
   font-weight: 700;
   font-size: 12px;
+  font-size: clamp(12px, 4vw, 15px);
 }
 @media (min-width: 990px) {
   #es-rc #es-rc-content .es-kv__text--second {
@@ -546,6 +547,7 @@
   font-weight: 200;
   font-size: 30px;
   font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
 }
@@ -672,7 +674,7 @@
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 }
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 430px) {
   #es-rc #es-rc-content .es-kv {
     background: url("../images/kv.png") no-repeat;
     position: relative;
@@ -710,12 +712,12 @@
   }
   #es-rc #es-rc-content .es-kv__title {
     padding: 0 10px;
-    font-size: 30px;
+    font-size: 25px;
     position: static;
   }
   #es-rc #es-rc-content .es-kv__packshot {
     position: absolute;
-    bottom: -5px;
+    bottom: 0px;
     right: 35px;
     padding-bottom: 0;
   }
